@@ -9,3 +9,6 @@
 ## Every Quarter
 0 0 1 */3 * /usr/bin/python3 /home/alice/crontab/api.py > log.txt 2>&1 & 
 0 0 1 */3 * ./home/alice/crontab/crontab_bash.sh
+
+/home/alice_wu/crontab
+pip3 install pandas

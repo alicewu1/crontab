@@ -1,10 +1,11 @@
 # pulls data daily from api dataset
 
 #use requests package and formatting it 
+import crontab
 import os 
 import sys
 import time
-import pandas
+import pandas as pd
 import requests # for API
 import json
 
@@ -15,8 +16,13 @@ cwd = os.getcwd()
 print(cwd)
 
 # create a new dictionary with dummy data
-response_API = requests.get('https://datadiscovery.nlm.nih.gov/resource/crzr-uvwg.csv')
-response_API.to_csv('data/10-10-10.csv')
+response_API = requests.get('https://datadiscovery.nlm.nih.gov/resource/crzr-uvwg.json')
+response_API = response_API.json()
+df = pd.DataFrame.from_records(response_API)
+print(df)
+
+response_API.to_csv('data\10-10-10.csv')
+
 
 # get the current time
 now = time.time()
