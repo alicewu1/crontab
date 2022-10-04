@@ -8,6 +8,7 @@ import time
 import pandas as pd
 import requests # for API
 import json
+import csv
 
 # get current working directory
 cwd = os.getcwd()
@@ -21,7 +22,7 @@ response_API = response_API.json()
 df = pd.DataFrame.from_records(response_API)
 print(df)
 
-response_API.to_csv('data\10-10-10.csv')
+df.to_csv('data/api_data.csv')
 
 
 # get the current time
