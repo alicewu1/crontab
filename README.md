@@ -25,7 +25,7 @@
 7. nano api.py 
 8. Select nano as editor
 9. crontab -e 
-    -  Insert crontab expressions created using crontab guru
+    -  Insert crontab expressions created using https://crontab.guru/ 
 10. Ctrl + O (Save)
 11. Ctrl + X (Exit)
     - Display: crontab: installing new crontab
@@ -38,7 +38,7 @@
     - To give myself persmission to the bash file)
 18. ./crontab_bash.sh (to run file)
 
-To detach my screen session, but leave my processes running:
+**To detach my screen session, but leave my processes running:**
 19. Ctrl + A
 20. Ctrl + D (stopped jobs)
 21. sudo nohup python3 crontab_bash.sh > log.txt 2>&1 &
