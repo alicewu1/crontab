@@ -10,6 +10,12 @@ import requests # for API
 import json
 import csv
 
+
+# get the current time
+now = time.time()
+timestart = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime(now))
+print('This program started running at: ', timestart)
+
 # get current working directory
 cwd = os.getcwd()
 
@@ -32,6 +38,10 @@ now = time.time()
 nowStr = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime(now))
 
 # create a new file in the current working directory
-with open(cwd + '/testFile_' + nowStr + '.txt', 'w') as f:
+with open(cwd + '/home/alice_wu/crontab/api_' + nowStr + '.txt', 'w') as f:
     f.write(str(data))
 
+# time end
+now = time.time()
+endTime = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime(now))
+print('This program started running at: ', endTime)
