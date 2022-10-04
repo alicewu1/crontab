@@ -39,7 +39,7 @@
 18. ./crontab_bash.sh (to run file)
 
 
-**To detach my screen session, but leave my processes running:**
+##### **To detach my screen session, but leave my processes running:**
 
 19. Ctrl + A
 20. Ctrl + D (stopped jobs)
