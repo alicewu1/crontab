@@ -38,7 +38,9 @@
     - To give myself persmission to the bash file)
 18. ./crontab_bash.sh (to run file)
 
+
 **To detach my screen session, but leave my processes running:**
+
 19. Ctrl + A
 20. Ctrl + D (stopped jobs)
 21. sudo nohup python3 crontab_bash.sh > log.txt 2>&1 &
