@@ -14,6 +14,7 @@
 - a python file (.py) that contains the python code for pulling down the data /// the retrieved data should then be saved locally on that machine where the cron job is running 
 - e.g., should be part of the python code (e.g., df.to_csv(‘path/to/file/saved/data_10-10-10.csv)   
 
+**API Retreived from NIH:** https://datadiscovery.nlm.nih.gov/Drugs-and-Chemicals/Pillbox-retired-January-28-2021-/crzr-uvwg 
 
 ## **.SSH Terminal Setup on GCP:**
 1. sudo apt-get update 
