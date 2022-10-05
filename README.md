@@ -1,20 +1,27 @@
 # crontab
 
 
-**This repo aims to:**
-1. Automate tasks using crontab
-2. Create 1 python file that pulls down data from an API and then create 3 cron jobs for that python API based on the following parameters: 
+**This repo aims to automate tasks using crontab and contains:**
+- markdown file (.md) with instructions for how the python files were automated using 3 crontab expressions (https://crontab.guru/):
+- Creating python file (.py) 
+  - that pulls down data from an API 
+  - retreived data is then saved locally on the machine where the cron jobs are running
+  - should be part of the python code (e.g. data.to_csv('path/to/file/saved/data_10-10-10.csv)
+
+#### Once a day, regardless of time:
+    0 0 * * * /usr/bin/python3 /home/alice_wu/crontab/api.py > log.txt 2>&1 &
+#### Every Sunday at 10 PM:
+    00 10 * * SUN /usr/bin/python3 /home/alice_wu/crontab/api.py > log.txt 2>&1 &
+#### Every Quarter:
+    0 0 1 */3 * /usr/bin/python3 /home/alice_wu/crontab/api.py > log.txt 2>&1 &
+    
  
-    - One should pull down data from an API once a day (don’t care about what time) 
-    - One should pull down data every Sunday night at 10:00pm 
-    - One should pull down data at the end of every quarter
+#### **API Retreived from NIH:** https://datadiscovery.nlm.nih.gov/Drugs-and-Chemicals/Pillbox-retired-January-28-2021-/crzr-uvwg 
 
-**This repo contains two files:** 
-- markdown file (.md) with instructions for how the python files were automated using crontab 
-- a python file (.py) that contains the python code for pulling down the data /// the retrieved data should then be saved locally on that machine where the cron job is running 
-- e.g., should be part of the python code (e.g., df.to_csv(‘path/to/file/saved/data_10-10-10.csv)   
 
-**API Retreived from NIH:** https://datadiscovery.nlm.nih.gov/Drugs-and-Chemicals/Pillbox-retired-January-28-2021-/crzr-uvwg 
+
+------    
+    
 
 ## **.SSH Terminal Setup on GCP:**
 1. sudo apt-get update 
@@ -26,7 +33,7 @@
 7. nano api.py 
 8. Select nano as editor
 9. crontab -e 
-    -  Insert crontab expressions created using https://crontab.guru/ 
+    -  Insert crontab expressions
 10. Ctrl + O (Save)
 11. Ctrl + X (Exit)
     - Display: crontab: installing new crontab
