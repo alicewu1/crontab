@@ -10,7 +10,7 @@
   - should be part of the python code (data.to_csv('/home/alice_wu/crontab/data/api_data.csv')
 
 ## README.md 
-this .md contains instructions for how the python files were automated using 3 crontab expressions (https://crontab.guru/)
+- this .md contains instructions for how the python files were automated using 3 crontab expressions (https://crontab.guru/)
 
 #### Once a day, regardless of time:
     0 0 * * * /usr/bin/python3 /home/alice_wu/crontab/api.py > log.txt 2>&1 &
@@ -19,4 +19,6 @@ this .md contains instructions for how the python files were automated using 3 c
 #### Every Quarter:
     0 0 1 */3 * /usr/bin/python3 /home/alice_wu/crontab/api.py > log.txt 2>&1 &
     
+## setup.md 
+  - contains instructions for how to setup up your .ssh terminal in a remote VM
  
