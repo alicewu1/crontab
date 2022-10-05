@@ -1,0 +1,14 @@
+        id enabled               created_at  ... part_medicine_name pillbox_imprint pillbox_size
+0    41846    True  2017-10-17T17:32:23.000  ...                NaN             NaN          NaN
+1     8100    True  2017-10-17T17:29:56.000  ...                NaN             NaN          NaN
+2     5258    True  2017-10-17T17:29:44.000  ...                NaN             NaN          NaN
+3    21271    True  2017-10-17T17:30:52.000  ...                NaN             NaN          NaN
+4    77050    True  2019-09-20T21:10:47.000  ...                NaN             NaN          NaN
+..     ...     ...                      ...  ...                ...             ...          ...
+995   2767    True  2017-10-17T17:29:32.000  ...                NaN             NaN            9
+996  28951    True  2017-10-17T17:31:25.000  ...                NaN             NaN          NaN
+997  22768    True  2017-10-17T17:30:58.000  ...                NaN             NaN          NaN
+998  43337    True  2017-10-17T17:32:30.000  ...                NaN             NaN          NaN
+999  37663    True  2017-10-17T17:32:04.000  ...                NaN             NaN          NaN
+
+[1000 rows x 53 columns]

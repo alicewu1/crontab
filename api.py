@@ -25,10 +25,10 @@ print(cwd)
 # create a new dictionary with dummy data
 response_API = requests.get('https://datadiscovery.nlm.nih.gov/resource/crzr-uvwg.json')
 response_API = response_API.json()
-df = pd.DataFrame.from_records(response_API)
-print(df)
+data= pd.DataFrame.from_records(response_API)
+print(data)
 
-df.to_csv('/home/alice_wu/crontab/data/api_data.csv')
+data.to_csv('/home/alice_wu/crontab/data/api_data.csv')
 
 
 # get the current time
@@ -38,7 +38,7 @@ now = time.time()
 nowStr = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime(now))
 
 # create a new file in the current working directory
-with open(cwd + '/home/alice_wu/crontab/api_' + nowStr + '.txt', 'w') as f:
+with open(cwd + '/data/api_' + nowStr + '.txt', 'w') as f:
     f.write(str(data))
 
 # time end
