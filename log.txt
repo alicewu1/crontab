@@ -1,0 +1,5 @@
+nohup: ignoring input
+  File "crontab_bash.sh", line 1
+    echo "Hello, we are going to now run the crontab_bash script"
+         ^
+SyntaxError: invalid syntax
